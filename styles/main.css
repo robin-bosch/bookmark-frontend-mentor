@@ -217,7 +217,9 @@ section {
 }
 
 .download-intro {
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .browser-container {
@@ -227,7 +229,7 @@ section {
 }
 
 .browser-card {
-    width:90vw;
+    width:clamp(10rem, 90vw, 25rem);
 
     display: flex;
     flex-direction: column;
@@ -249,11 +251,14 @@ section {
 }
 
 .card-divider {
-    width:90%;
+    width:100%;
 }
 
 .browser-card-bottom {
     padding:1rem;
+}
+.browser-card-bottom button {
+    width:100%;
 }
 
 /*
@@ -264,7 +269,8 @@ section {
 .faq-section {
     display: flex;
     flex-direction: column;
-
+    align-items: center;
+    gap:1rem;
 }
 
 .faq-intro {
@@ -273,7 +279,7 @@ section {
 }
 
 .faq-container {
-
+    width:clamp(10rem, 90vw, 50rem);
 }
 
 .faq-question {
@@ -282,8 +288,7 @@ section {
     
     display:flex;
     flex-direction: column;
-
-    
+   
 }
 
 .faq-question:first-child {
@@ -292,22 +297,37 @@ section {
 
 .faq-question-header {
     width:100%;
+    padding:1rem 0;
 
     display: flex;
     justify-content: space-between;
 }
 
+.faq-question-header:hover {
+    cursor: pointer;
+}
+
 .faq-question-header:hover h3 {
+    
     color:var(--soft-red);
 }
 
 .faq-question-arrow {
     color: var(--soft-blue);
+    transition: 0.3s;
+    transform-origin: center top;
 }
 
 .faq-question-header.open .faq-question-arrow {
     transform: rotate(180deg);
+    transition: 0.3s;
 }
+
+.faq-question-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
 
 .faq-question-content p {
     text-align:left;
@@ -322,6 +342,7 @@ section {
 .contact-section {
     display:flex;
     flex-direction: column;
+    background: var(--soft-blue);
 }
 
 .contact-intro {
@@ -358,6 +379,22 @@ input[type=email] {
 }
 
 @media (min-width: 1024px) {
+    .browser-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #chrome-card {
+    }
+
+    #firefox-card {
+        margin-top: 16rem;
+    }
+
+    #opera-card {
+        margin-top: 24rem;
+    }
 }
 
 @media (min-width: 1280px) {

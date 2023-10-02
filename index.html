@@ -26,33 +26,57 @@
 <body>
     <header>
         <img src="images/logo-bookmark.svg" alt="">
-        <nav>
-            <a href="">FEATURES</a>
-            <a href="">PRICING</a>
-            <a href="">CONTACT</a>
-        </nav>
-        <button class="btn btn-full-red">LOGIN</button>
+
+        <div class="mobile-right-header">
+            <div id="burger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div id="mobile-menu">
+                <nav class="mobile-header-nav">
+                    <a href="" class="nav-link">FEATURES</a>
+                    <a href="" class="nav-link">PRICING</a>
+                    <a href="" class="nav-link">CONTACT</a>
+                </nav>
+                <button class="btn mobile-login-btn">LOGIN</button>
+                <div class="header-social-container">
+                    <i class="icon-btn fa-brands fa-facebook"></i>
+                    <i class="icon-btn fa-brands fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <div class="desktop-right-header">
+            <nav class="desktop-header-nav">
+                <a href="" class="nav-link">FEATURES</a>
+                <a href="" class="nav-link">PRICING</a>
+                <a href="" class="nav-link">CONTACT</a>
+            </nav>
+            <button class="btn full-red-btn">LOGIN</button>
+        </div>
+        
+        
     </header>
     <main>
         <section class="intro-section">
+            <div class="intro-image">
+                <img src="/images/illustration-hero.svg" alt="Hero image">
+                <div class="background-pill"></div>
+            </div>
             <div class="intro-content">
                 <h1 class="intro-heading">
                     A Simple Bookmark Manager
                 </h1>
                 <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
                 <div class="intro-btns">
-                    <button class="btn blue-btn">
+                    <button class="btn full-blue-btn">
                         Get it on Chrome
                     </button>
-                    <button class="btn blue-btn">
+                    <button class="btn full-gray-btn">
                         Get it on Firefox
                     </button>
                 </div>
-                
-            </div>
-            <div class="intro-image">
-                <img src="/images/illustration-hero.svg" alt="Hero image">
-                <div class="background-pill"></div>
             </div>
         </section>
         <section class="features-section">
@@ -111,25 +135,37 @@
             </div>
             <div class="browser-container">
                 <article class="browser-card">
-                    <img src="images/logo-chrome.svg" alt="">
-                    <h3>Add to Chrome</h3>
-                    <p>Minimum version 62</p>
-                    <div class="card-divider"></div>
-                    <button class="btn full-blue-btn">Add & Install Extension</button>
+                    <div class="browser-card-top">
+                        <img src="images/logo-chrome.svg" alt="">
+                        <h3>Add to Chrome</h3>
+                        <p>Minimum version 62</p>
+                    </div>
+                    <img src="images/bg-dots.svg" alt="Card divider" class="card-divider">
+                    <div class="browser-card-bottom">
+                        <button class="btn full-blue-btn">Add & Install Extension</button>
+                    </div>
                 </article>
                 <article class="browser-card">
-                    <img src="images/logo-firefox.svg" alt="">
-                    <h3>Add to Firefox</h3>
-                    <p>Minimum version 55</p>
-                    <div class="card-divider"></div>
-                    <button class="btn full-blue-btn">Add & Install Extension</button>
+                    <div class="browser-card-top">
+                        <img src="images/logo-firefox.svg" alt="">
+                        <h3>Add to Firefox</h3>
+                        <p>Minimum version 55</p>
+                    </div>
+                    <img src="images/bg-dots.svg" alt="Card divider" class="card-divider">
+                    <div class="browser-card-bottom">
+                        <button class="btn full-blue-btn">Add & Install Extension</button>
+                    </div>
                 </article>
                 <article class="browser-card">
-                    <img src="images/logo-opera.svg" alt="">
-                    <h3>Add to Opera</h3>
-                    <p>Minimum version 46</p>
-                    <div class="card-divider"></div>
-                    <button class="btn full-blue-btn">Add & Install Extension</button>
+                    <div class="browser-card-top">
+                        <img src="images/logo-opera.svg" alt="">
+                        <h3>Add to Opera</h3>
+                        <p>Minimum version 46</p>
+                    </div>
+                    <img src="images/bg-dots.svg" alt="Card divider" class="card-divider">
+                    <div class="browser-card-bottom">
+                        <button class="btn full-blue-btn">Add & Install Extension</button>
+                    </div>
                 </article>
             </div>
         </section>
@@ -140,44 +176,44 @@
             </div>
             <div class="faq-container">
                 <article class="faq-question">
-                    <div class="question-header">
+                    <div class="faq-question-header">
                         <h3>What is Bookmark?</h3>
-                        <i class="fa-solid fa-chevron-up"></i>
+                        <i class="fa-solid fa-chevron-down faq-question-arrow"></i>
                     </div>
-                    <div class="question-content">
+                    <div class="faq-question-content">
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lobortis nisl a accumsan mattis. Mauris dapibus, metus in sodales varius, lacus ipsum egestas lorem, vel ultrices nulla leo quis tellus. Morbi vel sollicitudin neque.
                         </p>
                     </div>
                 </article>
                 <article class="faq-question">
-                    <div class="question-header">
+                    <div class="faq-question-header">
                         <h3>How can I request a new browser?</h3>
-                        <i class="fa-solid fa-chevron-up"></i>
+                        <i class="fa-solid fa-chevron-down faq-question-arrow"></i>
                     </div>
-                    <div class="question-content">
+                    <div class="faq-question-content">
                         <p>
                             Praesent a rutrum dolor, sit amet posuere felis. Etiam ornare tristique ipsum vitae sollicitudin. Donec eget aliquam odio. Mauris faucibus, justo at fermentum viverra, orci felis blandit mi, sit amet lacinia odio erat et enim.
                         </p>
                     </div>
                 </article>
                 <article class="faq-question">
-                    <div class="question-header">
+                    <div class="faq-question-header">
                         <h3>Is there a mobile app?</h3>
-                        <i class="fa-solid fa-chevron-up"></i>
+                        <i class="fa-solid fa-chevron-down faq-question-arrow"></i>
                     </div>
-                    <div class="question-content">
+                    <div class="faq-question-content">
                         <p>
                             Etiam vehicula ornare tincidunt. Ut ut venenatis lectus, nec dignissim justo. Mauris in viverra urna, sed facilisis urna. Nam pellentesque ligula quis elit congue tincidunt. Aliquam faucibus justo ac est sollicitudin, ac aliquam arcu rhoncus.
                         </p>
                     </div>
                 </article>
                 <article class="faq-question">
-                    <div class="question-header">
+                    <div class="faq-question-header">
                         <h3>What about other Chromium browsers?</h3>
-                        <i class="fa-solid fa-chevron-up"></i>
+                        <i class="fa-solid fa-chevron-down faq-question-arrow"></i>
                     </div>
-                    <div class="question-content">
+                    <div class="faq-question-content">
                         <p>
                             Proin et nulla quis libero rhoncus semper. Duis augue dolor, aliquam nec vehicula eu, feugiat sed arcu. Sed quis nisi non augue elementum venenatis ac eu ipsum. Donec neque purus, ultricies vitae imperdiet eget, mattis et dui.
                         </p>
@@ -191,25 +227,27 @@
                 <p>35,000+ ALREADY JOINED</p>
                 <h2>Stay up-to-date with what we're doing</h2>
             </div>
-            <form action="">
-                <input type="email">
-                <input type="submit" >
+            <form action="" class="contact-form">
+                <input type="email" placeholder="Enter your email address">
+                <input type="submit" value="Contact Us" class="btn full-red-btn">
             </form>
         </section>
     </main>
     <footer>
-        <div>
+        <div class="footer-left">
             <img src="images/logo-bookmark.svg" alt="">
-            <nav>
+            <nav class="footer-nav">
                 <a href="">FEATURES</a>
                 <a href="">PRICING</a>
                 <a href="">CONTACT</a>
             </nav>
         </div>
-        <div class="social-container">
+        <div class="footer-social-container">
             <i class="icon-btn fa-brands fa-facebook"></i>
             <i class="icon-btn fa-brands fa-twitter"></i>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

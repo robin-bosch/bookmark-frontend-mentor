@@ -1,0 +1,75 @@
+/*
+# 
+# All the styling for the footer
+#
+*/
+footer {
+    display:flex;
+    flex-direction: column;
+    background:var(--very-dark-blue);
+}
+
+.footer-left {
+    display:flex;
+    flex-direction: column;
+}
+
+.footer-left img {
+    width:5rem;
+}
+
+.footer-nav {
+    display:flex;
+    flex-direction: column;
+}
+
+.footer-nav {
+    color:white;
+    transition: 0.3s;
+}
+
+.footer-nav:hover {
+    color:var(--soft-red);
+    transition: 0.3s;
+}
+
+/*
+#
+# Social container
+#
+*/
+.footer-social-container {
+    display:flex;
+    gap:1rem;
+}
+
+.icon-btn {
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.icon-btn:hover {
+    cursor:pointer;
+    color:var(--soft-red);
+    transition:0.3s;
+}
+
+/*
+#
+# Media queries
+#
+*/
+@media (min-width: 1024px) {
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-left {
+        flex-direction: row;
+    }
+
+    .footer-nav {
+        flex-direction: row;
+    }
+}

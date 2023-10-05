@@ -25,7 +25,7 @@
 </head>
 <body>
     <header>
-        <img src="images/logo-bookmark.svg" alt="">
+        <img src="images/logo-bookmark.svg" alt="" id="header-logo">
 
         <div class="mobile-right-header">
             <div id="burger-btn">
@@ -35,14 +35,20 @@
             </div>
 
             <div id="mobile-menu">
-                <nav class="mobile-header-nav">
-                    <a href="" class="nav-link">FEATURES</a>
-                    <a href="" class="nav-link">PRICING</a>
-                    <a href="" class="nav-link">CONTACT</a>
-                </nav>
-                <button class="btn mobile-login-btn">LOGIN</button>
+                <div class="mobile-menu-top">
+                    <div class="mobile-menu-header">
+                        <img src="images/logo-bookmark-mobile-menu.svg" alt="" id="mobile-menu-logo">
+                        <i class="fa-solid fa-xmark" id="close-btn"></i>
+                    </div>
+                    <nav class="mobile-header-nav">
+                        <a href="" class="nav-link">FEATURES</a>
+                        <a href="" class="nav-link">PRICING</a>
+                        <a href="" class="nav-link">CONTACT</a>
+                    </nav>
+                    <button class="btn" id="mobile-login-btn">LOGIN</button>
+                </div>
                 <div class="header-social-container">
-                    <i class="icon-btn fa-brands fa-facebook"></i>
+                    <i class="icon-btn fa-brands fa-square-facebook"></i>
                     <i class="icon-btn fa-brands fa-twitter"></i>
                 </div>
             </div>
@@ -53,7 +59,7 @@
                 <a href="" class="nav-link">PRICING</a>
                 <a href="" class="nav-link">CONTACT</a>
             </nav>
-            <button class="btn full-red-btn">LOGIN</button>
+            <button class="btn full-red-btn" id="desktop-login-btn">LOGIN</button>
         </div>
         
         
@@ -65,15 +71,17 @@
                 <div class="background-pill"></div>
             </div>
             <div class="intro-content">
-                <h1 class="intro-heading">
-                    A Simple Bookmark Manager
-                </h1>
-                <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
-                <div class="intro-btns">
-                    <button class="btn full-blue-btn">
+                <div class="intro-content-text">
+                    <h1 class="intro-heading">
+                        A Simple Bookmark Manager
+                    </h1>
+                    <p class="text-left">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+                </div>
+                <div class="intro-btn-container">
+                    <button class="btn full-blue-btn intro-btn">
                         Get it on Chrome
                     </button>
-                    <button class="btn full-gray-btn">
+                    <button class="btn full-gray-btn intro-btn">
                         Get it on Firefox
                     </button>
                 </div>
@@ -84,11 +92,11 @@
                 <h2>Features</h2>
                 <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync betweeen your devicees so you can access them on the go.</p>
             </div>
-            <div>
+            <div class="features-content">
                 <nav class="features-navigation">
-                    <a href="" class="" id="">Simple Bookmarking</a>
-                    <a href="">Speedy Searching</a>
-                    <a href="">Easy Sharing</a>
+                    <div class="feature-nav-link" id="" onclick="showPanel(0)">Simple Bookmarking</div>
+                    <div class="feature-nav-link" onclick="showPanel(1)">Speedy Searching</div>
+                    <div class="feature-nav-link" onclick="showPanel(2)">Easy Sharing</div>
                 </nav>
                 <div class="features-container">
                     <article class="feature-tab">
@@ -99,29 +107,29 @@
                         <div class="feature-tab-content">
                             <h2>Bookmark in one click</h2>
                             <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-                            <button class="btn full-blue-btn">More Info</button>
+                            <button class="btn full-blue-btn more-info-button">More Info</button>
                         </div>
                     </article>
                     <article class="feature-tab">
                         <div class="feature-tab-images">
-                            <img src="images/illustration-features-tab-1.svg" alt="">
+                            <img src="images/illustration-features-tab-2.svg" alt="">
                             <div class="background-pill"></div>
                         </div>
                         <div class="feature-tab-content">
                             <h2>Intelligent search</h2>
                             <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
-                            <button class="btn full-blue-btn">More Info</button>
+                            <button class="btn full-blue-btn more-info-button">More Info</button>
                         </div>
                     </article>
                     <article class="feature-tab">
                         <div class="feature-tab-images">
-                            <img src="images/illustration-features-tab-1.svg" alt="">
+                            <img src="images/illustration-features-tab-3.svg" alt="">
                             <div class="background-pill"></div>
                         </div>
                         <div class="feature-tab-content">
                             <h2>Share your bookmarks</h2>
                             <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.</p>
-                            <button class="btn full-blue-btn">More Info</button>
+                            <button class="btn full-blue-btn more-info-button">More Info</button>
                         </div>
                     </article>
                 </div>
@@ -177,7 +185,7 @@
             <div class="faq-container">
                 <article class="faq-question">
                     <div class="faq-question-header">
-                        <h3>What is Bookmark?</h3>
+                        <h4>What is Bookmark?</h4>
                         <i class="fa-solid fa-chevron-down faq-question-arrow"></i>
                     </div>
                     <div class="faq-question-content">
@@ -188,7 +196,7 @@
                 </article>
                 <article class="faq-question">
                     <div class="faq-question-header">
-                        <h3>How can I request a new browser?</h3>
+                        <h4>How can I request a new browser?</h4>
                         <i class="fa-solid fa-chevron-down faq-question-arrow"></i>
                     </div>
                     <div class="faq-question-content">
@@ -199,7 +207,7 @@
                 </article>
                 <article class="faq-question">
                     <div class="faq-question-header">
-                        <h3>Is there a mobile app?</h3>
+                        <h4>Is there a mobile app?</h4>
                         <i class="fa-solid fa-chevron-down faq-question-arrow"></i>
                     </div>
                     <div class="faq-question-content">
@@ -210,7 +218,7 @@
                 </article>
                 <article class="faq-question">
                     <div class="faq-question-header">
-                        <h3>What about other Chromium browsers?</h3>
+                        <h4>What about other Chromium browsers?</h4>
                         <i class="fa-solid fa-chevron-down faq-question-arrow"></i>
                     </div>
                     <div class="faq-question-content">
@@ -220,22 +228,26 @@
                     </div>
                 </article>
             </div>
-            <button class="btn full-blue-btn">More Info</button>
+            <button class="btn full-blue-btn" id="faq-button">More Info</button>
         </section>
         <section class="contact-section">
             <div class="contact-intro">
                 <p>35,000+ ALREADY JOINED</p>
                 <h2>Stay up-to-date with what we're doing</h2>
             </div>
-            <form action="" class="contact-form">
-                <input type="email" placeholder="Enter your email address">
-                <input type="submit" value="Contact Us" class="btn full-red-btn">
+            <form action="" class="contact-form" id="#contact-form" novalidate>
+                <div class="email-input-container">
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" size="30" required>
+                    <div id="email-error" class="error-message">Whoops, make sure it's an email</div>
+                </div>
+                
+                <input type="submit" value="Contact Us" class="btn full-red-btn" id="contact-btn">
             </form>
         </section>
     </main>
     <footer>
         <div class="footer-left">
-            <img src="images/logo-bookmark.svg" alt="">
+            <img src="images/logo-bookmark-footer.svg" alt="">
             <nav class="footer-nav">
                 <a href="">FEATURES</a>
                 <a href="">PRICING</a>
@@ -243,7 +255,7 @@
             </nav>
         </div>
         <div class="footer-social-container">
-            <i class="icon-btn fa-brands fa-facebook"></i>
+            <i class="icon-btn fa-brands fa-square-facebook"></i>
             <i class="icon-btn fa-brands fa-twitter"></i>
         </div>
     </footer>

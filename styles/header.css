@@ -5,26 +5,49 @@
 */
 header {
     width:100%;
-    /* height:5rem; */
-
-    /* top:0; */
-    /* left:0; */
     padding:3rem 10vw;
     
-    /* position:fixed; */
-
-    /* z-index:2; */
     display:flex;
     align-items: center;
     justify-content: space-between;
     
     background: var(--white);
-    
-    /* transform-style: preserve-3d; */
 }
 
+.desktop-right-header {
+    display:none;
+}
+
+/*
+#
+# Mobile header
+#
+*/
 .mobile-right-header {
     display:flex;
+}
+
+/* Burger button */
+#burger-btn {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#burger-btn:hover {
+    cursor:pointer;
+}
+
+#burger-btn span {
+    width:1.25em;
+    height:0.2em;
+    margin:0.1em;
+    border-radius: 5px;
+    
+    background:var(--very-dark-blue);
+    
+    transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
 }
 
 #mobile-menu {
@@ -40,15 +63,40 @@ header {
     flex-direction: column;
     justify-content: space-between;
 
-
     transition: 0.5s ease left;
 
     z-index:3;
 }
 
-#close-btn {
-    font-size:1.5rem;
-    color:var(--white);
+/* Mobile menu background */
+#mobile-menu::after {
+    content: "";
+
+    width:100%;
+    height:100%;
+
+    position:absolute;
+    z-index:-1;
+    left:0;
+    top:0;
+
+    background: var(--very-dark-blue);
+    opacity: 0.9;
+}
+
+#mobile-menu.open {
+    left:0rem;
+    transition: 0.5s ease left;
+}
+
+/* Hide logo and Burger button when open */
+#header-logo, #burger-btn {
+    transition-delay: 0.3s;
+}
+
+#header-logo.open, #burger-btn.open {
+    visibility: hidden;
+    transition-delay: 0s;
 }
 
 .mobile-menu-header {
@@ -56,31 +104,14 @@ header {
     justify-content: space-between;
 }
 
-#mobile-menu::after {
-    content: "";
-
-    background: var(--very-dark-blue);
-    z-index:-1;
-    opacity: 0.9;
-    position:absolute;
-    width:100%;
-    height:100%;
-    left:0;
-    top:0;
-}
-
-#mobile-login-btn {
-    width:100%;
-    background:none;
+#close-btn {
+    font-size:1.5rem;
     color:var(--white);
-    font-size:1rem;
-    letter-spacing: 0.25rem;
-    border:2px solid var(--white);
 }
 
 .mobile-header-nav {
-    margin:2rem 0rem;
     width:100%;
+    margin:2rem 0rem;
 
     display: flex;
     flex-direction: column;
@@ -92,18 +123,25 @@ header {
 
 .mobile-header-nav a {
     padding:1rem;
-    /* font-size: 0.9rem; */
+    border-bottom:1px solid var(--grayish-blue);
+
     text-align: center;
     color: var(--white);
     letter-spacing: 0.1rem;
-    border-bottom:1px solid var(--grayish-blue);
 }
 
-/*
-#
-# Social container
-#
-*/
+#mobile-login-btn {
+    width:100%;
+    border:2px solid var(--white);
+
+    font-size:1rem;
+    letter-spacing: 0.25rem;
+    color:var(--white);
+
+    background:none;
+}
+
+/* Mobile menu social icons */
 .header-social-container {
     display:flex;
     justify-content: center;
@@ -121,69 +159,6 @@ header {
     transition:0.3s;
 }
 
-#mobile-menu.open {
-    left:0rem;
-    transition: 0.5s ease left;
-}
-
-#header-logo, #burger-btn {
-    transition-delay: 0.3s;
-}
-#header-logo.open, #burger-btn.open {
-    visibility: hidden;
-    transition-delay: 0s;
-}
-
-.desktop-right-header {
-    display:none;
-}
-
-
-/**
-*
-* Animated burger 
-*/
-#burger-btn {
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-#burger-btn:hover {
-    cursor:pointer;
-}
-
-#burger-btn span {
-    width:1.25em;
-    height:0.2em;
-    margin:0.1em;
-    border-radius: 5px;
-
-    background:black;
-    
-    transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
-}
-
-#burger-btn span:first-child {
-    transform: rotateZ(0deg);
-    transform-origin: 100%;
-    transition-delay: 0.1s;
-}
-
-#burger-btn span:nth-child(2) {
-    opacity: 1;
-    transition: opacity, 0.1s;
-    transition-delay: 0.3s;
-}
-
-#burger-btn span:last-child {
-    transform: rotateZ(0deg);
-    transform-origin: 100%;
-    transition-delay: 0.1s;
-}
-
-
 /*
 #
 # Media queries
@@ -191,10 +166,6 @@ header {
 */
 @media (min-width: 1024px) {
     /* Show Request invite button and remove burger button */
-    header {
-        /* height:7rem; */
-    }
-
     .mobile-right-header {
         display: none;
     }
@@ -212,13 +183,14 @@ header {
     
     .desktop-header-nav .nav-link {
         height:100%;
-        letter-spacing: 0.1rem;
-        font-size:0.80rem;
-
+        
         display: flex;
         align-items: center;
         position: relative;
 
+        font-size:0.80rem;
+        letter-spacing: 0.1rem;
+        
         transition: 0.3s;
     }
 
@@ -230,16 +202,5 @@ header {
 
     #desktop-login-btn {
         padding:0.5rem 2rem;
-    }
-    
-    
-
-    /* Fixes the nav to the top even when in opened position */
-    #header-nav.open {
-        top:0rem;
-    }
-    /* Remove background in open position */
-    .nav-background {
-        display: none;
     }
 }

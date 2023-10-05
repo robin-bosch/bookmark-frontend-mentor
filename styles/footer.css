@@ -5,10 +5,12 @@
 */
 footer {
     padding:2rem 10vw;
+
     display:flex;
     gap:3rem;
     flex-direction: column;
     align-items: center;
+
     background:var(--very-dark-blue);
 }
 
@@ -22,16 +24,13 @@ footer {
     width:10rem;
 }
 
-#footer-logo .text {
-    fill: var(--white);
-}
-
 .footer-nav {
     display:flex;
     flex-direction: column;
     align-items: center;
-    color:white;
     gap:2rem;
+
+    color:var(--white);
 }
 
 .footer-nav a {
@@ -45,20 +44,16 @@ footer {
     transition: 0.3s;
 }
 
-/*
-#
-# Social container
-#
-*/
+/* Footer social */
 .footer-social-container {
     display:flex;
     gap:3rem;
 }
 
 .icon-btn {
+    font-size:1.75rem;
     color: var(--white);
     transition: 0.3s;
-    font-size:1.75rem;
 }
 
 .icon-btn:hover {

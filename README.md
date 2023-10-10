@@ -42,28 +42,47 @@ The following designs were given to build the project:
 </details>
 
 <details>
+<summary>Intelligent Tab Design</summary>
+
+![](docs/tab-2-design.jpg)
+</details>
+
+<details>
+<summary>Share your bookmarks Tab Design</summary>
+
+![](docs/tab-3-design.jpg)
+</details>
+
+<details>
+<summary>Hover states on desktop</summary>
+
+![](docs/desktop-active-states.jpg)
+</details>
+
+<details>
 <summary>The Mobile design with a shown width of 375px</summary>
 
 ![](docs/mobile-design.jpg)
 </details>
 
 <details>
-<summary>Hover states</summary>
+<summary>Navigation menu on mobile</summary>
 
-![](docs/active-states.jpg)
-</details>
-
-<details>
-<summary>The expanded navigation menu on mobile </summary>
-
-![](docs/mobile-navigation.jpg)
+![](docs/mobile-active-nav.jpg)
 </details>
 
 ## My process
 
 ### Challenges
 
+- Getting the interactive elements to work
+- Having the blue background pills work on all screen sizes
+- Working with two different navigation menus
+
 ### What I learned
+
+- First time making a FAQ section in vanilla JavaScript
+- First time making a carousel in vanilla JavaScript
 
 ## Technologies used
 
@@ -71,9 +90,9 @@ The following designs were given to build the project:
 
 - HTML
 - CSS
-- JS
+- JavaScript
 
-All was written in plain HTML, CSS and JS.
+All was written in plain HTML, CSS and JavaScript.
 
 ### Frameworks used
 

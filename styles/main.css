@@ -257,6 +257,7 @@ section {
     color:var(--soft-red);
 }
 
+
 .features-tab-container {
     width:100%;
     display:flex;
@@ -274,7 +275,7 @@ section {
 }
 
 .feature-tab-images {
-    padding:2.5rem 2rem;
+    padding:2rem 2rem;
 
     position:relative;
     
@@ -297,7 +298,7 @@ section {
 }
 
 .feature-tab-content {
-    padding:0rem 2rem;
+    padding:1rem 2rem;
 
     display: flex;
     justify-content: center;
@@ -640,3 +641,26 @@ section {
         font-size: 1rem;
     }
 }
+
+@media (min-width: 1536px) {
+    .feature-tab-images .background-pill, .intro-image .background-pill {
+        height:85%;
+    }
+
+    .feature-tab-images {
+        justify-content: end;
+    }
+    
+    .feature-tab-images img {
+        margin-right:10%;
+    }
+
+    .intro-image {
+        justify-content: start;
+    }
+
+    .intro-image img {
+        margin-left:10%;
+    }
+}
+

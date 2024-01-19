@@ -16,11 +16,15 @@ Designed by Frontend Mentor
     - [Challenges](#challenges)
     - [What I learned](#what-i-learned)
 - [Technologies used](#technologies-used)
+    - [Languages](#languages)
+    - [Frameworks used](#frameworks-used)     
 - [Validation and Testing](#validation-and-testing)
-    -
-- [Author](#author)
-- [Credits](#author)
-- [Acknowledgments](#acknowledgments)
+    - [HTML Validation](#html-validation)
+    - [CSS Validation](#css-validation)
+    - [Accessibility Testing](#accessibility-testing)
+    - [Device Testing](#device-testing)
+- [Useful resources](#useful-resources)
+- [Credits](#credits)
 - [License](#license)
 
 
@@ -122,7 +126,7 @@ The website was tested on the following devices:
 
 Other screen resolutions were tested in the browser with dev tools from 2560x1440 down to 320x568.
 
-### Useful resources
+## Useful resources
 
 Two helpful reference guides I use: 
 - [Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
